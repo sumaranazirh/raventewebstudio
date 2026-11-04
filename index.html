@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ravente Web Studio – A fast website from €50 a month</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f7f5;--surface:#fff;--ink:#12302f;--muted:#53706d;--line:#d5e2de;--accent:#ffb400;--accent-ink:#2a1d00;--deep:#12302f;--deep-ink:#eaf6f2;--ok:#1b8a59;--wa:#25d366;--wa-ink:#05200f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a1b;--surface:#132728;--ink:#eaf6f2;--muted:#9fb9b5;--line:#264241;--deep:#071211;--ok:#4bd18f}}
+:root[data-theme="dark"]{--bg:#0b1a1b;--surface:#132728;--ink:#eaf6f2;--muted:#9fb9b5;--line:#264241;--deep:#071211;--ok:#4bd18f}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,sans-serif;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 84px)}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:10px}
+.logo{font:800 21px "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav .links{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 22px;border-radius:14px;font:700 17px "DM Sans",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:var(--wa-ink)}
+.btn.call{background:var(--accent);color:var(--accent-ink)}
+.btn.line{border-color:var(--ink);color:var(--ink)}
+.btn.sm{min-height:42px;padding:8px 16px;font-size:15px;border-radius:10px}
+.hero{padding:44px 0 32px;display:grid;gap:30px}
+@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;padding:64px 0 48px}}
+.hi{display:inline-block;background:var(--surface);border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:15px;font-weight:500}
+.hero h1{font-size:clamp(36px,6.5vw,64px);font-weight:800;margin:18px 0 16px}
+.lead{font-size:19px;color:var(--muted);max-width:52ch;margin:0}
+.contact{display:grid;gap:10px;margin-top:26px;max-width:440px}
+.contact .btn{width:100%}
+.nopress{font-size:15px;color:var(--muted);margin:4px 0 0}
+.offer{background:var(--deep);color:var(--deep-ink);border-radius:24px;padding:28px;position:relative}
+.offer .flag{position:absolute;top:-14px;left:24px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;padding:5px 14px;border-radius:99px}
+.offer h2{font-size:28px;margin:6px 0 4px}
+.offer .price{font:800 54px "Bricolage Grotesque",sans-serif;margin:8px 0 0;line-height:1}
+.offer .price small{font:500 17px "DM Sans",sans-serif;opacity:.8}
+.offer .per{opacity:.85;margin:6px 0 16px;font-size:15px}
+.offer ul{list-style:none;padding:0;margin:0 0 20px}
+.offer li{padding:6px 0 6px 28px;position:relative}
+.offer li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:800}
+.offer .btn{width:100%}
+.reasons{display:grid;gap:12px;grid-template-columns:1fr 1fr;padding:6px 0 10px}
+@media(min-width:800px){.reasons{grid-template-columns:repeat(4,1fr)}}
+.reasons div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;font-weight:500;font-size:15.5px}
+.reasons span{display:block;font-size:26px}
+section{padding:56px 0}
+.head{max-width:60ch;margin-bottom:28px}
+.head h2{font-size:clamp(28px,4.2vw,42px);font-weight:800}
+.head p{color:var(--muted);margin:10px 0 0}
+.steps{display:grid;gap:16px;counter-reset:s}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 22px 22px 70px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:20px;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:800 18px "Bricolage Grotesque",sans-serif;display:flex;align-items:center;justify-content:center}
+.steps b{display:block;font-size:18px}
+.steps p{margin:4px 0 0;color:var(--muted);font-size:15.5px}
+ul.steps{padding:0;margin:0}
+.more{display:grid;gap:16px}
+@media(min-width:700px){.more.four{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.more.four{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:800px){.more{grid-template-columns:repeat(3,1fr)}}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.tier.pop{border:3px solid var(--accent)}
+.tier .tag{font-size:14px;font-weight:700;color:var(--ok);min-height:22px}
+.tier h3{font-size:22px;margin:2px 0 4px}
+.tier .for{color:var(--muted);font-size:15px;margin:0 0 10px}
+.tier .p{font:800 32px "Bricolage Grotesque",sans-serif}
+.tier .p small{font:500 15px "DM Sans",sans-serif;color:var(--muted)}
+.tier .per{color:var(--muted);font-size:14px;margin:0 0 12px}
+.tier ul{list-style:none;padding:0;margin:0 0 18px;flex:1;font-size:15.5px}
+.tier li{padding:6px 0 6px 24px;position:relative;border-top:1px solid var(--line)}
+.tier li::before{content:"\2713";position:absolute;left:0;color:var(--ok);font-weight:800}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 20px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:0 0 18px;color:var(--muted);max-width:68ch}
+.final{background:var(--deep);color:var(--deep-ink);border-radius:26px;padding:44px 24px;text-align:center}
+.final h2{font-size:clamp(28px,5vw,44px);font-weight:800}
+.final p{max-width:50ch;margin:12px auto 0;opacity:.9}
+.final .contact{margin:26px auto 0}
+.final .btn.line{border-color:var(--deep-ink);color:var(--deep-ink)}
+footer{padding:26px 0 30px;color:var(--muted);font-size:14px;text-align:center}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--bg);border-top:1px solid var(--line);padding:10px 14px calc(env(safe-area-inset-bottom,0px) + 10px);display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bar .btn{min-height:50px}
+@media(min-width:900px){.bar{left:auto;right:20px;bottom:20px;border:0;background:transparent;padding:0;grid-template-columns:auto auto}.bar .btn{box-shadow:0 8px 22px rgba(0,0,0,.28)}body{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#top">Ravente Web Studio</a>
+<div class="links"><a class="btn call sm" href="tel:00353899548998">📞 Call</a><a class="btn wa sm" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20find%20out%20more%20about%20your%20website%20packages." target="_blank" rel="noopener">💬 WhatsApp</a></div>
+</nav></div></header>
+
+<main id="top"><div class="wrap">
+<div class="hero">
+<div>
+<span class="hi">👋 Hi, we’re Ravente Web Studio. Local support across the UK &amp; Ireland, no time-zone lag.</span>
+<h1>Is your slow, outdated website costing you customers?</h1>
+<p class="lead">Let’s fix that. You get a fast, custom website with your domain name registered and set up, secure hosting and ongoing care, all for one yearly price with no hidden fees.</p>
+<div class="contact">
+<a class="btn wa" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20find%20out%20more%20about%20the%20Micro-Starter%20package%20(%E2%82%AC599%2Fyear)." target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+<a class="btn call" href="tel:00353899548998">📞 Call us now</a>
+<a class="btn line" href="mailto:contact@webcraft.ie">✉️ Send an email</a>
+<p class="nopress">Just say hello. No pressure, no obligation.</p>
+</div>
+</div>
+
+<aside class="offer" aria-label="Micro-Starter package">
+<span class="flag">Best way to start</span>
+<h2>Micro-Starter</h2>
+<p style="margin:0;opacity:.85">For new local sole traders &amp; portfolio builders.</p>
+<div class="price">€50 <small>/ month</small></div>
+<p class="per">Just €599 for the full year, everything included.</p>
+<ul><li>High-impact 1-page landing page</li><li>Mobile-first fast conversion layout</li><li>Click-to-call &amp; WhatsApp widget</li><li>Social media links &amp; share previews</li><li>Domain name registration &amp; setup</li><li>12 months secure hosting &amp; SSL</li></ul>
+<a class="btn wa" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20secure%20the%20Micro-Starter%20package%20(%E2%82%AC599%2Fyear)." target="_blank" rel="noopener">💬 Get the Micro-Starter</a>
+<a class="btn" style="margin-top:10px;border-color:var(--deep-ink);color:var(--deep-ink)" href="https://rivaaz.ie" target="_blank" rel="noopener">👀 See a sample: rivaaz.ie</a>
+</aside>
+</div>
+
+<div class="reasons">
+<div><span>🔒</span>Secure SSL included</div>
+<div><span>🛡️</span>Weekly backups</div>
+<div><span>🤝</span>Direct line to our team</div>
+<div><span>🌐</span>Domain set up for you</div>
+</div>
+
+<section id="how"><div class="head"><h2>Getting started takes three easy steps</h2><p>You deal with the same friendly team from start to finish.</p></div>
+<ul class="steps">
+<li><b>Say hello</b><p>Message or call us. Tell us about your business and we’ll recommend the right package.</p></li>
+<li><b>We build and set up</b><p>We design your site, register your domain and connect hosting and SSL.</p></li>
+<li><b>You go live</b><p>Your site is online, fast and ready to bring in enquiries.</p></li>
+</ul></section>
+
+<section id="social"><div class="head"><h2>Your social media, connected to your website</h2><p>The Micro-Starter links your site and your social profiles, so visitors can find you everywhere and share you with friends in one tap.</p></div>
+<div class="more">
+<article class="tier"><h3>🔗 Social profile links</h3><p class="for">Buttons for your Facebook, Instagram, TikTok, LinkedIn or any other profile sit on your page, so a visitor can follow you straight away.</p></article>
+<article class="tier"><h3>🖼️ Share previews</h3><p class="for">When your link is shared on WhatsApp, Facebook or LinkedIn, it shows your title, description and image, so it looks professional and gets more clicks.</p></article>
+<article class="tier"><h3>📲 Easy sharing</h3><p class="for">Visitors can send your page to a friend on WhatsApp or copy the link, which helps word of mouth travel further.</p></article>
+</div>
+<p style="color:var(--muted);margin:16px 0 0">Send us your profile links and we’ll connect them for you as part of setup.</p></section>
+
+<section id="packages"><div class="head"><h2>Need more later? Grow at your own pace</h2><p>Start with the Micro-Starter, or pick a bigger package now. Every price covers domain registration and setup, plus 12 months of hosting, security and friendly support across the UK and Ireland.</p></div>
+<div class="more four">
+<article class="tier pop"><span class="tag">★ Most popular choice</span><h3>Standard Static Package</h3><p class="for">For established service providers &amp; local lead generation.</p>
+<div class="p">€60 <small>/ month</small></div><p class="per">€720 for the full year</p>
+<ul><li>Custom 5–8 page responsive website</li><li>Advanced lead capture contact forms</li><li>On-page SEO &amp; XML sitemap setup</li><li>Weekly backups &amp; uptime monitoring</li><li>Up to 1 hr/mo minor text updates</li><li>Domain registration &amp; full setup</li></ul>
+<a class="btn wa" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Standard%20Static%20Package%20(%E2%82%AC720%2Fyear)." target="_blank" rel="noopener">💬 Ask about Standard</a></article>
+
+<article class="tier"><span class="tag">&nbsp;</span><h3>Stripe Store Package</h3><p class="for">For online stores, digital products &amp; booking platforms.</p>
+<div class="p">€70 <small>/ month</small></div><p class="per">€840 for the full year</p>
+<ul><li>Multi-page dynamic store or web app</li><li>Secure Stripe payment gateway integration</li><li>Automated customer receipts &amp; checkout flows</li><li>Daily backups &amp; enterprise security</li><li>Up to 3–4 hrs/mo ongoing edits</li><li>Domain registration &amp; full setup</li></ul>
+<a class="btn line" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Stripe%20Store%20Package%20(%E2%82%AC840%2Fyear)." target="_blank" rel="noopener">💬 Ask about E-Commerce</a></article>
+
+<article class="tier"><span class="tag">★ Inventory + backend</span><h3>E-Commerce Pro Package</h3><p class="for">For growing shops that need stock control and an easy back office.</p>
+<div class="p">€275 <small>/ month</small></div><p class="per">€3,300 for the full year</p>
+<ul><li>Everything in the Stripe Store Package</li><li>Inventory management: stock levels &amp; low-stock alerts</li><li>Product variants (sizes, colours) &amp; categories</li><li>Easy admin backend: add products, manage orders &amp; customers</li><li>Order dashboard with status tracking &amp; sales reports</li><li>Daily backups &amp; enterprise security</li><li>Up to 4 hrs/mo ongoing edits</li><li>Domain registration &amp; full setup</li></ul>
+<a class="btn line" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20the%20E-Commerce%20Pro%20Package%20(%E2%82%AC275%2Fmonth)." target="_blank" rel="noopener">💬 Ask about E-Commerce Pro</a></article>
+
+<article class="tier"><span class="tag">★ Never miss a lead</span><h3>24/7 AI Sales Assistant</h3><p class="for">For high-inquiry brands needing 24/7 automated support.</p>
+<div class="p">€650 <small>/ month</small></div><p class="per">€7,800 for the full year</p>
+<ul><li>Custom 8–12 page bespoke website</li><li>AI chatbot trained on your business data</li><li>24/7 lead qualification &amp; routing</li><li>Monthly prompt engineering &amp; retraining</li><li>Up to 5 hrs/mo dedicated local support</li><li>Domain registration &amp; full setup</li></ul>
+<a class="btn line" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20the%2024%2F7%20AI%20Sales%20Assistant%20(%E2%82%AC7%2C800%2Fyear)." target="_blank" rel="noopener">💬 Ask about the AI Assistant</a></article>
+</div></section>
+
+<section class="faq" id="faq"><div class="head"><h2>Questions people ask</h2></div>
+<details><summary>How does social media integration work in the Starter package?</summary><p>We add links to your social profiles on your page, set up share previews so your site looks good when posted on WhatsApp, Facebook or LinkedIn, and add easy share buttons. You send us your profile links and we handle the rest during setup.</p></details>
+<details><summary>Is the domain name really included?</summary><p>Yes. We register your domain name and handle all the technical setup (DNS, email routing, SSL and hosting connection) so your site goes live without you touching a thing.</p></details>
+<details><summary>What happens after the 1-year package ends?</summary><p>After 12 months, you can renew your annual hosting and maintenance retainer at a preferential rate, or take full ownership of the source code with zero lock-in.</p></details>
+<details><summary>Can I upgrade between packages later?</summary><p>Yes! Many clients start with the Micro-Starter or Standard package and seamlessly upgrade to our Stripe store or AI assistant tiers as their revenue grows.</p></details>
+<details><summary>What are the payment terms?</summary><p>To secure your project slot, we require a 50% initial deposit, 25% upon launch, and the remaining 25% structured across the retainer period (or flexible monthly options available).</p></details>
+</section>
+
+<section id="start" style="padding-top:20px"><div class="final">
+<h2>Let’s build your digital presence</h2>
+<p>Skip the offshore communication delays. Talk directly with our team today. Project slots are limited each month.</p>
+<div class="contact">
+<a class="btn wa" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20find%20out%20more%20about%20your%20website%20packages." target="_blank" rel="noopener">💬 Message on WhatsApp</a>
+<a class="btn call" href="tel:00353899548998">📞 Call us now</a>
+<a class="btn line" href="mailto:contact@webcraft.ie">✉️ Email us directly</a>
+</div></div></section>
+</div></main>
+
+<footer><div class="wrap">© 2026 Ravente Web Studio. Mobile-first wiki web package.</div></footer>
+
+<div class="bar">
+<a class="btn call" href="tel:00353899548998">📞 Call</a>
+<a class="btn wa" href="https://wa.me/353899548998?text=Hi%20Ravente%20Web%20Studio%2C%20I%20would%20like%20to%20find%20out%20more%20about%20your%20website%20packages." target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</body>
+</html>
